@@ -8,15 +8,5 @@ year=$(date +%Y)
 #copy file to backup folder
 newName=`echo 1.17-World_$month-$day-$year`
 
-#creates a new dir in backups/
-mkdir backups/$newName
-
-#copy contents
-cp -R "1.17-World" backups/$newName
-
-#zip the backup
-tar -zcf "$newName.tar.gz" backups/$newName
-mv "$newName.tar.gz" backups/
-
-#remove new dir
-rm -R backups/$newName
+#zip backup from world file and put it in the correct folder
+tar -zvcf "backups/$newName.tar.gz" 1.17-World
