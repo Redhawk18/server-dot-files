@@ -10,3 +10,8 @@ newName=`echo 1.17-World_$month-$day-$year`
 
 #zip backup from world file and put it in the correct folder
 tar -zvcf "backups/$newName.tar.gz" 1.17-World
+
+#rerun the server
+clear
+./start.sh
+
